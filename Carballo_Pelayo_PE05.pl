@@ -147,7 +147,7 @@ father(X, Y) :- parent(X, Y), male(X).
 mother(X, Y) :- parent(X, Y), female(X).
 son(X, Y) :- parent(Y, X), male(X).
 daughter(X, Y) :- parent(Y, X), female(X).
-sibling(X, Y) :- parent(Z, X), parent(Z, Y).
+sibling(X, Y) :- parent(Z, X), parent(Z, Y), X\=Y.
 
 % X is an aunt of Y.
 % Works til Y is undefined.
